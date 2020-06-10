@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="tittle"><span>Empresa textil J&R</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+
+        <div id="profile">
+            <div id="photo"><img src="images/mark.jpg" alt=""></div>
+            <div id="name"><span>Usuario</span></div>
+        </div>
+
+        <div id="menu-items">
+            <div class="item">
+                <a href="index.html">
+                    <div class="icon"><img src="images/pedido.png" alt=""></div>
+                    <div class="title"><span>Mis pedidos</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="images/seguimiento.png" alt=""></div>
+                    <div class="title"><span>Seguimiento del pedido</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="images/carrito.png" alt=""></div>
+                    <div class="title"><span>Realizar pedido</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+        </div>
+    </div>
+    <div id="pedidos">
+        <div class="container">
+            <div class="content-center">
+                <h2>MIS PEDIDOS</h2>
+                <p>Los pedidos que usted a realizado son los siguientes:</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="pedidos-container">
+                        <div class="detalles plan-light">
+                            <h3>Pedido 1</h3>
+                            <h2>S/. 1300</h2>
+                        <ul class="top-margin-xs">
+                        <li>Detalle 1:</li>
+                        <li>Detalle 2:</li> 
+                        <li>Detalle 3:</li>
+                        <li>Detalle 4:</li>     
+                        </ul>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pedidos-container">
+                        <div class="detalles plan-dark">
+                            <h3>Pedido 2</h3>
+                            <h2>S/. 2000</h2>
+                        <ul class="top-margin-xs">
+                        <li>Detalle 1:</li>
+                        <li>Detalle 2:</li> 
+                        <li>Detalle 3:</li>
+                        <li>Detalle 4:</li>     
+                        </ul>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+            document.querySelector('body').classList.toggle('body-expanded');
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+</body>
+
+</html>
