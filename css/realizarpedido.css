@@ -7,8 +7,8 @@
 }
 
 body{
-    background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/dinpattern-stripe.gif');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     padding: 0;
     margin: 0;
@@ -20,6 +20,7 @@ h1{
 h2{
     font-size: 48px;
     margin-bottom: 30px;
+    color: #ffffff;
 }
 h3{
     font-size: 60px;
@@ -196,6 +197,7 @@ h5{
     margin: 15px;
 
 }
+
 .detalles{
     padding: 50px 80px;
     border-radius: 2px;
@@ -211,4 +213,8 @@ h5{
     background-color: #1a1a1a;
     border: 2px solid #1a1a1a;
     color: #ffffff;
+}
+
+#nuevopedido{
+    padding-bottom: 40px;
 }
