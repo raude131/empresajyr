@@ -8,14 +8,15 @@
 
 body{
     background-image: url('../images/dinpattern-stripe.gif');
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     padding: 0;
     margin: 0;
     margin-left: var(--width-collapsed);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1{
-
+    text-align: center;
+    padding-bottom: 10px;
 }
 h2{
     font-size: 60px;
@@ -23,8 +24,13 @@ h2{
 }
 h3{
     font-size: 48px;
+    text-align: center;
 }
-
+h4{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 0px;
+}
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -32,6 +38,9 @@ h3{
     margin-top: 50px;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.estados{
+    float: right;
 }
 .body-expanded{
     margin-left: var(--width);
@@ -94,10 +103,7 @@ h3{
     padding: var(--padding);
     margin: 0 auto;
 }
-#sidemenu #profile #photo img{
-    border-radius: 50%;
-    width: 100%;
-}
+
 #sidemenu #profile #photo, #sidemenu #profile #name{
     font-size: 24px;
     padding: var(--padding) 0;
@@ -159,7 +165,12 @@ h3{
     overflow: hidden;
 }
 .menu-expanded #profile #photo{
-    width: 200px;
+    width: 90px;
+    height: 90px;
+    background-color: green;
+    border-radius: 100%;
+
+
 }
 .menu-expanded #profile #name{
     width: 100%;
@@ -195,6 +206,7 @@ h3{
     padding: 50px 80px;
     border-radius: 2px;
     min-width: 450px;
+    background-image: url('../images/aa.png');
 }
 
 .plan-light{

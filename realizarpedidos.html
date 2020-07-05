@@ -29,8 +29,8 @@
         </div>
 
         <div id="profile">
-            <div id="photo"><img src="images/mark.jpg" alt=""></div>
-            <div id="name"><span>Usuario</span></div>
+            <div id="photo"><h4>G</h4></div>
+            <div id="name"><span>Gzuck</span></div>
         </div>
 
         <div id="menu-items">
@@ -60,7 +60,7 @@
     <div id="nuevopedido">
         <div class="container">
             <div class="content-center">
-                <h2>REALIZAR NUEVO PEDIDO</h2>
+                <h2>REALIZAR NUEVO PEDIDO <i class="fas fa-file-signature"></i></h2>
             </div>
             <div class="row">
                 <div class="col-md-8">
@@ -82,30 +82,39 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput2"
                                     placeholder="Coloque la cantidad de prendas en unidades">
                             </div>
-                            <div class="form-group">
-                                <label for="formGroupExampleInput2">Materia prima a disponer</label>
-                                <select class="browser-default custom-select">
-                                    <option selected>Seleccione la materia prima</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formGroupExampleInput2">Cantidad de materia prima</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2"
-                                    placeholder="Coloque la cantidad de la materia prima en m2">
-                            </div>
-                            <button class="btn btn-dark btn-block my-4" type="submit">AÑADIR</button>
+                            <button class="btn btn-red btn-block my-4" type="submit">AÑADIR</button>
                         </form>
                     </div>
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Mensaje importante</h5>
-                            <p class="card-text">"Se verificará la capacidad de producción para aceptar su pedido,
-                                espere la confirmación"</p>
-                            <a href="#!" class="btn btn-dark">Enviar solicitud</a>
-                        </div>
-                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">TIPO DE PRENDA</th>
+                                <th scope="col">CANTIDAD DE PRENDAS</th>
+                                <th scope="col">ELIMINAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><i class="far fa-trash-alt"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td><i class="far fa-trash-alt"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><i class="far fa-trash-alt"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="col-md-4">
@@ -121,6 +130,18 @@
                                 <li class="list-group-item">Prendas solicitadas</li>
                                 <li class="list-group-item">Total a pagar</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">¡MENSAJE IMPORTANTE!</h5>
+                            <p class="card-text" style="font-size: 18px;">"Se verificará la capacidad de producción para aceptar su pedido,
+                                espere la confirmación"</p>
+                            <a href="#!" class="btn btn-dark">Enviar solicitud</a>
                         </div>
                     </div>
                 </div>
