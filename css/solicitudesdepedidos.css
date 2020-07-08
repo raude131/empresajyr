@@ -34,6 +34,11 @@ h5{
     font-size: 25px;
     text-align: center;
 }
+h6{
+    font-size: 20px;
+    float: right;
+    padding-right: 20px;
+}
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -189,6 +194,15 @@ h5{
 
 .menu-collapsed #profile #name{
     display: none;
+}
+.menu-collapsed #profile #photo{
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 100%;
+}
+.menu-collapsed #profile #photo h4{
+    font-size: 45px;
 }
 .menu-collapsed .item{
     width: 100 px;
