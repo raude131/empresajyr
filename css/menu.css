@@ -31,6 +31,11 @@ h4{
     text-align: center;
     margin-top: 0px;
 }
+h6{
+    font-size: 20px;
+    float: right;
+    padding-right: 20px;
+}
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -191,9 +196,22 @@ h4{
 .menu-collapsed #profile #name{
     display: none;
 }
+.menu-collapsed #profile #photo{
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 100%;
+}
+.menu-collapsed #profile #photo h4{
+    font-size: 45px;
+}
 .menu-collapsed .item{
     width: 100 px;
 }
+.menu-collapsed #menu-items .cerrar h6{
+    display: none;
+}
+
 
 #pedidos{
     padding-bottom: 40px;
