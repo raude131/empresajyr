@@ -262,3 +262,8 @@ h6{
 .table tr td textarea{
     height: 50px;
 }
+
+footer{
+    position: relative;
+    width: 100%;
+}

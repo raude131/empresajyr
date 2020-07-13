@@ -250,3 +250,8 @@ h6{
     margin-bottom: 30px;
     
 }
+
+footer{
+    position: relative;
+    width: 100%;
+}
