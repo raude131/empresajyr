@@ -30,7 +30,9 @@
         </div>
 
         <div id="profile">
-            <div id="photo"><h4>G</h4></div>
+            <div id="photo">
+                <h4>G</h4>
+            </div>
             <div id="name"><span>Gzuck</span></div>
         </div>
 
@@ -55,73 +57,109 @@
                         <tr>
                             <th scope="col">N°</th>
                             <th scope="col">CLIENTE</th>
-                            <th scope="col">PRENDA</th>
-                            <th scope="col">CANTIDAD</th>
-                            <th scope="col">MATERIA PRIMA</th>
-                            <th scope="col">CANTIDAD</th>
-                            <th scope="col">DÍA</th>
-                            <th scope="col">PRECIO</th>
-                            <th scope="col">ESTADO</th>
+                            <th scope="col">FECHA</th>
+                            <th scope="col">PRENDAS SOLICITADAS</th>
+                            <th scope="col">TOTAL A PAGAR</th>
+                            <th scope="col">DETALLE</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Pioner</td>
-                            <td>Polos<br>
-                                Camisas
-                            </td>
-                            <td>100<br>
-                                150
-                            </td>
-                            <td>TELA<br>
-                                TELA</td>
-                            <td>50<br>
-                                50
-                            </td>
+                            <td>Bardales Priale, Rolando</td>
                             <td>20/06/20</td>
-                            <td>S/.1000</td>
-                            <td>
-                                <button type="button" class="btn btn-dark btn-sm m-0">ACEPTAR</button>
-                                <button type="button" class="btn btn-dark btn-sm m-0">RECHAZAR</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Gzuck</td>
-                            <td>Polos<br>
-                                Camisas</td>
-                            <td>55<br>
-                                400</td>
-                            <td>TELA<br>
-                                TELA</td>
-                            <td>50<br>
-                                50
-                            </td>
-                            <td>24/06/20</td>
+                            <td>100</td>
                             <td>S/.3000</td>
                             <td>
-                                <button type="button" class="btn btn-dark btn-sm m-0">ACEPTAR</button>
-                                <button type="button" class="btn btn-dark btn-sm m-0">RECHAZAR</button>
+                                <button type="button" class="btn btn-success btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalDetalle">
+                                    Ver <i class="fa fa fa-sort mr-0"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalDetalle" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                    Detalle del pedido
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">TIPO PRENDA</th>
+                                                            <th scope="col">CANTIDAD DE PRENDAS</th>
+                                                            <th scope="col">SUBTOTAL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Bardales Priale, Rolando</td>
+                                                            <td>100</td>
+                                                            <td>S/.3000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Levis</td>
-                            <td>Polos
-                            </td>
-                            <td>200
-                            </td>
-                            <td>TELA<br>
-                                TELA</td>
-                            <td>50<br>
-                                50
-                            </td>
-                            <td>26/06/20</td>
-                            <td>S/.2000</td>
                             <td>
-                                <button type="button" class="btn btn-dark btn-sm m-0">ACEPTAR</button>
-                                <button type="button" class="btn btn-dark btn-sm m-0">RECHAZAR</button>
+                                <button type="button" class="btn btn-dark btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalEstado">ACEPTAR</button>
+                                <button type="button" class="btn btn-dark btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalEstado">RECHAZAR</button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalEstado" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                    Detalle del correo
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="row" style="margin-bottom: 12px;">
+                                                    <div class="col-md-3" style="font-size: 1.2em;">
+                                                        <label for="formGroupExampleInput2">Correo:</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" id="formGroupExampleInput2">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3" style="font-size: 1.2em;">
+                                                        <label for="formGroupExampleInput2">Mensaje:</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <textarea rows="5" style="resize: none;" 
+                                                        class="form-control" id="formGroupExampleInput2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-dark">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -130,6 +168,9 @@
 
         </div>
     </div>
+
+
+
     <!-- Footer -->
     <footer class="page-footer font-small stylish-color-dark lighten-3 pt-4">
 
