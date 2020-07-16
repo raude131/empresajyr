@@ -15,7 +15,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/realizarpedido.css">
-    <link rel="stylesheet" href="css/menu.css">
     <link rel="icon" href="images/polo.ico">
 </head>
 
@@ -31,7 +30,9 @@
         </div>
 
         <div id="profile">
-            <div id="photo"><h4>G</h4></div>
+            <div id="photo">
+                <h4>G</h4>
+            </div>
             <div id="name"><span>Gzuck</span></div>
         </div>
 
@@ -56,12 +57,6 @@
                     <div class="title"><span>Realizar pedido</span></div>
                 </a>
             </div>
-            <div class="item">
-                <a href="realizarpedidos.html">
-                    <div class="icon"><img src="images/ficha3.png" alt=""></div>
-                    <div class="title"><span>Ingresar ficha técnica</span></div>
-                </a>
-            </div>
             <div class="item separator"></div>
             <div class="cerrar">
                 <h6><a href="">Cerrar sesión</a></h6>
@@ -77,7 +72,7 @@
                 <div class="col-md-8">
                     <div class="pedidos-container">
                         <!-- Default form group -->
-                        <form style="color: #ffff;">
+                        <form style="color: #ffff;" id="form">
                             <!-- Default input -->
                             <div class="form-group">
                                 <label for="formGroupExampleInput">Tipo de prenda</label>
@@ -88,10 +83,13 @@
                                 </select>
                             </div>
                             <!-- Default input -->
-                            <div class="form-group">
+                            <div class="campo">
                                 <label for="formGroupExampleInput2">Cantidad de prendas</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2"
+                                <input type="text" class="form-control" id="cantidadprendas"
                                     placeholder="Coloque la cantidad de prendas en unidades">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
                             </div>
                             <button class="btn btn-red btn-block my-4" type="submit">AÑADIR</button>
                         </form>
@@ -150,7 +148,8 @@
                     <div class="card text-center">
                         <div class="card-body">
                             <h5 class="card-title">¡MENSAJE IMPORTANTE!</h5>
-                            <p class="card-text" style="font-size: 18px;">"Se verificará la capacidad de producción para aceptar su pedido,
+                            <p class="card-text" style="font-size: 18px;">"Se verificará la capacidad de producción para
+                                aceptar su pedido,
                                 espere la confirmación"</p>
                             <a href="#!" class="btn btn-dark">Enviar solicitud</a>
                         </div>
@@ -246,7 +245,7 @@
         });
     </script>
 
-
+    <script src="js/validacionrealizarpedido.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
