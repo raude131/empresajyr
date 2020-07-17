@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes de ficha tecnica | J&R</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/Solicitudfichatecnica.css">
+    <link rel="icon" href="images/polo.ico">
+</head>
+
+<body>
+    <div id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="tittle"><span>Empresa textil J&R</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+
+        <div id="profile">
+            <div id="photo">
+                <h4>G</h4>
+            </div>
+            <div id="name"><span>Gzuck</span></div>
+        </div>
+
+        <div id="menu-items">
+            <div class="item">
+                <a href="index.html">
+                    <div class="icon"><img src="images/solicitudes.png" alt=""></div>
+                    <div class="title"><span>Solicitudes de pedidos</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="images/fecha.png" alt=""></div>
+                    <div class="title"><span>Establecer fecha de producción</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="images/avance.png" alt=""></div>
+                    <div class="title"><span>Registrar avance diario</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="cerrar">
+                <h6><a href="">Cerrar sesión</a></h6>
+            </div>
+        </div>
+    </div>
+    <div id="solicitudespedidos">
+        <div class="container">
+            <div class="content-center">
+                <h2>SOLICITUDES DE FICHA TECNICA </h2>
+            </div>
+            <div class="row">
+                <table class="table" style="background-color: #ffff; text-align: center;">
+                    <thead class="black white-text">
+                        <tr>
+                            <th scope="col">N°</th>
+                            <th scope="col">CLIENTE</th>
+                            <th scope="col">FECHA</th>
+                            <th scope="col">PRENDAS SOLICITADAS</th>
+                            <th scope="col">TOTAL A PAGAR</th>
+                            <th scope="col">DETALLE FICHA TECNICA</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Bardales Priale, Rolando</td>
+                            <td>20/06/20</td>
+                            <td>100</td>
+                            <td>S/.3000</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalDetalle">
+                                    Ver <i class="fa fa fa-sort mr-0"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalDetalle" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle" style="text-align: center;">
+                                                    Detalle de la ficha tecnica
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">Talla</th>
+                                                            <th scope="col">S</th>
+                                                            <th scope="col">M</th>
+                                                            <th scope="col">L</th>
+                                                            <th scope="col">XL</th>
+                                                            <th scope="col">XXL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>cANTIDAD</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;width: auto;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">Tela</th>
+                                                            <th scope="col">Color</th>
+                                                            <th scope="col">Diseño</th>
+                                                            <th scope="col">Bordado</th>
+                                                            <th scope="col">Estampado</th>
+                                                            <th scope="col">T.cuello</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Algodon</td>
+                                                            <td>rojo</td>
+                                                            <td>Ninguno</td>
+                                                            <td>Ninguni</td>
+                                                            <td>Logo</td>
+                                                            <td>Camisa</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;width: auto;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">Etiqueta</th>
+                                                            <th scope="col">Talla</th>
+                                                            <th scope="col">Marca de la Empresa </th>
+                                                            <th scope="col">Composicion de la tela </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Se eligio</td>
+                                                            <td>SI</td>
+                                                            <td>NO</td>
+                                                            <td>NO</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">MEDIDAS</th>
+                                                            <th scope="col">S</th>
+                                                            <th scope="col">M</th>
+                                                            <th scope="col">L</th>
+                                                            <th scope="col">XL</th>
+                                                            <th scope="col">XXL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Pecho</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cintura</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cadera</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Manga(Largo)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Manga(Ancho)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Espalda(Alto)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="container">
+                                                    <div class="form-group purple-border">
+                                                        <label for="exampleFormControlTextarea4" style="font-weight: bold;">Detalles y comentarios:</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" style="border:black 3px solid;"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-dark btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalEstado">ACEPTAR</button>
+                                <button type="button" class="btn btn-dark btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalEstado">RECHAZAR</button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalEstado" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                    Detalle del correo
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="row" style="margin-bottom: 12px;">
+                                                    <div class="col-md-3" style="font-size: 1.2em;">
+                                                        <label for="formGroupExampleInput2">Correo:</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control"
+                                                            id="formGroupExampleInput2">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3" style="font-size: 1.2em;">
+                                                        <label for="formGroupExampleInput2">Mensaje:</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <textarea rows="5" style="resize: none;" class="form-control"
+                                                            id="formGroupExampleInput2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-dark">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small stylish-color-dark lighten-3 pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">NOSOTROS</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <a href="#!">MIS PEDIDOS</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!">SEGUIMIENTO DEL PEDIDO</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!">REALIZAR PEDIDO</a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <!-- Contact details -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">CONTACTO</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <i class="fas fa-home mr-3"></i>Dirección</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i>Correo</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i>Teléfono</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: J&R
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+            document.querySelector('body').classList.toggle('body-expanded');
+        });
+    </script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+</body>
+
+</html>
