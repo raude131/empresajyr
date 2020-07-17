@@ -18,12 +18,12 @@ formulario.addEventListener('submit', e =>{
 });
 
 function checkImputs(){
-    const nombreValue = nombre.value.trim()
-    const primerapellidoValue = primerapellido.value.trim()
-    const segundoapellidoValue = segundoapellido.value.trim()
+    const nombreValue = nombre.value
+    const primerapellidoValue = primerapellido.value
+    const segundoapellidoValue = segundoapellido.value
     const contraseñaValue = contraseña.value.trim()
     const cargoValue = cargo.value.trim()
-    const correoValue = correo.value.trim()
+    const correoValue = correo.value
     const direccionValue = direccion.value.trim()
     const empresaValue = empresa.value.trim()
     const rucValue = ruc.value.trim()
@@ -33,18 +33,24 @@ function checkImputs(){
 
     if(nombreValue === ''){
         setErrorFor(nombre, 'Ingrese su nombre')
+    }else if(!isNombre(nombreValue)){
+        setErrorFor(nombre, "No ingresó un nombre válido")
     }else{
         setSuccessFor(nombre)
     }
 
     if(primerapellidoValue === ''){
         setErrorFor(primerapellido, "Ingrese su apellido")
+    }else if(!isPrimerApellido(primerapellidoValue)){
+        setErrorFor(primerapellido, "No ingresó un apellido válido")
     }else{
         setSuccessFor(primerapellido)
     }
 
     if(segundoapellidoValue === ''){
         setErrorFor(segundoapellido, "Ingrese su apellido")
+    }else if(!isSegundoApellido(segundoapellidoValue)){
+        setErrorFor(segundoapellido, "No ingresó un apellido válido")
     }else{
         setSuccessFor(segundoapellido)
     }
@@ -137,8 +143,20 @@ function setSuccessFor(input){
     formControl.className = 'campo success'
 }
 
+function isNombre(nombre){
+    return /^([a-z]|[A-Z]){1}[a-z]+(\ ([a-z]|[A-Z]){1}[a-z]+){0,4}$/.test(nombre);
+}
+
+function isPrimerApellido(primerapellido){
+    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(primerapellido);
+}
+
+function isSegundoApellido(segundoapellido){
+    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(segundoapellido);
+}
+
 function isEmail(email){
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    return /^([a-z]|[A-Z]|[1-9])+(\.([a-z]|[A-Z]|[1-9])+)*\@(gmail.com)$/.test(email);
 }
 
 function validarNumero(number){

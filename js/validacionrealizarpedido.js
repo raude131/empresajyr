@@ -31,6 +31,5 @@ function setSuccessFor(input) {
 }
 
 function validarNumero(number) {
-    return /^([0-9])*$/.test(number);
-
+    return /^[0-9]{1,7}$/.test(number);
 }
