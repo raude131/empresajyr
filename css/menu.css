@@ -211,7 +211,9 @@ h6{
 .menu-collapsed #menu-items .cerrar h6{
     display: none;
 }
-
+.list-group-item{
+    border: none;
+}
 
 #pedidos{
     padding-bottom: 40px;
@@ -224,7 +226,6 @@ h6{
     padding: 50px 80px;
     border-radius: 2px;
     min-width: 450px;
-    background-image: url('../images/aa.png');
 }
 
 .plan-light{
