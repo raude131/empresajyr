@@ -272,3 +272,7 @@ footer{
     position: relative;
     width: 100%;
 }
+
+.table tr td select{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

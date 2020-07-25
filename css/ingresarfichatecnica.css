@@ -277,6 +277,7 @@ footer{
     padding-top: 10px;
 }
 
+
 .campo.success i.fa-check-circle{
     color: #2ecc71;
     visibility: visible;
@@ -299,3 +300,39 @@ footer{
 .campo.error small{
     visibility: visible;
 }
+
+.talla{
+    position: relative;
+}
+
+.talla input{
+    width: 80px;
+}
+.talla.success input{
+    border-color: #2ecc71;
+}
+.talla.error input{
+    border-color: #e74c3c;
+}
+
+.talla i{
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding-right: 12px;
+    padding-top: 8px;
+}
+
+
+.talla.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.talla.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
