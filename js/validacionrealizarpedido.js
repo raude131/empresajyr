@@ -1,21 +1,30 @@
-const form = document.getElementById("form")
-const cantidadprendas = document.getElementById("cantidadprendas")
+function validarRealizarPedido(form){
+    
+    let validacion = true;
+    const tipoPrenda = form.tipoPrenda;
+    const cantidadPrendas = form.cantidadPrendas;
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    checkImputs()
-});
+    if(tipoPrenda.value === 'Seleccione su tipo de prenda'){
+        setErrorFor(tipoPrenda, 'Ingrese un tipo de prenda');
+        validacion = false;
+    } else {
+        setSuccessFor(tipoPrenda);
+    }
 
-function checkImputs() {
-    const cantidadprendasValue = cantidadprendas.value.trim()
-    if (cantidadprendasValue === '') {
-        setErrorFor(cantidadprendas, "Ingrese una cantidad")
-    }else if(!validarNumero(cantidadprendasValue)){
-        setErrorFor(cantidadprendas, "Ingrese un valor numérico")
+    if(cantidadPrendas.value === '' || isEmpty(cantidadPrendas.value)){
+        setErrorFor(cantidadPrendas, 'Ingrese una cantidad');
+        validacion = false;
+    } else if(!isNumero(cantidadPrendas.value)){
+        setErrorFor(cantidadPrendas, 'Ingrese una cantidad valida');
+        validacion = false;
+    } else if(!isCantidadPrendas(cantidadPrendas.value)){
+        setErrorFor(cantidadPrendas,'Esa cantidad supera el cupo maximo')
+        validacion = false;
+    } else {
+        setSuccessFor(cantidadPrendas);
     }
-    else {
-        setSuccessFor(cantidadprendas)
-    }
+
+    return validacion;
 }
 
 function setErrorFor(input, message) {
@@ -30,6 +39,14 @@ function setSuccessFor(input) {
     campo.className = 'campo success'
 }
 
-function validarNumero(number) {
-    return /^[0-9]{1,7}$/.test(number);
+function isNumero(cantidadPrendas){
+    return /^\d+$/.test(cantidadPrendas);
+}
+
+function isCantidadPrendas(cantidadPrendas){
+    return /^[0-9]{1,8}$/.test(cantidadPrendas);
+}
+
+function isEmpty(texto){
+    return /^\s+$/.test(texto);
 }
