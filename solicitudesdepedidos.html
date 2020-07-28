@@ -38,28 +38,28 @@
 
         <div id="menu-items">
             <div class="item">
-                <a href="index.html">
+                <a href="solicitudesdepedidos.html">
                     <div class="icon"><img src="images/solicitudes.png" alt=""></div>
                     <div class="title"><span>Solicitudes de pedidos</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="item">
-                <a href="#">
+                <a href="establecerfecha.html">
                     <div class="icon"><img src="images/fecha.png" alt=""></div>
                     <div class="title"><span>Establecer fecha de producción</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="item">
-                <a href="#">
+                <a href="avancesdiarios.html">
                     <div class="icon"><img src="images/avance.png" alt=""></div>
                     <div class="title"><span>Registrar avance diario</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="cerrar">
-                <h6><a href="">Cerrar sesión</a></h6>
+                <h6><a href="index.html">Cerrar sesión</a></h6>
             </div>
         </div>
     </div>
@@ -138,73 +138,75 @@
                                     data-target="#modalRechazado">RECHAZAR</button>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="modalAceptado" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
-                                                    Detalle del correo
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-md-12" style="font-size: 1.2em;text-align: left;">
-                                                        <label for="formGroupExampleInput2">Mensaje:</label>
+                                <form name="form" action="#" method="POST">
+                                    <div class="modal fade" id="modalAceptado" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                        Detalle del correo
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="font-size: 1.2em;text-align: left;">
+                                                            <label for="formGroupExampleInput2">Mensaje:</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea rows="5" style="resize: none;" class="form-control"
+                                                            id="formGroupExampleInput2" name="mensaje"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <textarea rows="5" style="resize: none;" class="form-control"
-                                                            id="formGroupExampleInput2"></textarea>
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-dark">Enviar</button>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="#"><button type="button"
-                                                        class="btn btn-dark">Enviar</button></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                                 <!-- Modal -->
-                                <div class="modal fade" id="modalRechazado" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
-                                                    Detalle del correo
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-md-12" style="font-size: 1.2em;text-align: left;">
-                                                        <label for="formGroupExampleInput2">Mensaje:</label>
+                                <form name="form" action="#" method="POST">
+                                    <div class="modal fade" id="modalRechazado" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                        Detalle del correo
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="font-size: 1.2em;text-align: left;">
+                                                            <label for="formGroupExampleInput2">Mensaje:</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea rows="5" style="resize: none;" class="form-control"
+                                                            id="formGroupExampleInput2" name="mensaje"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <textarea rows="5" style="resize: none;" class="form-control"
-                                                            id="formGroupExampleInput2"></textarea>
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-dark">Enviar</button>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="#"><button type="button"
-                                                        class="btn btn-dark">Enviar</button></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </td>
                         </tr>
                     </tbody>

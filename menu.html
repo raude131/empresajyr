@@ -59,7 +59,7 @@
             </div>
             <div class="item separator"></div>
             <div class="cerrar">
-                <h6><a href="">Cerrar sesión</a></h6>
+                <h6><a href="index.html">Cerrar sesión</a></h6>
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@
                                         </li>
                                     </ul>
                                     <div>
-                                        <button class="btn btn-red btn-block my-0" type="submit">Agregar ficha tecnica</button>
+                                        <a class="btn btn-red btn-block my-0" href="ingresarfichatecnica.html">Agregar ficha tecnica</a>
                                     </div> 
                                 </div>
                             </div>
@@ -114,16 +114,11 @@
                                             <h3>PEDIDO 2</h3>
                                         </li>
                                         <li class="list-group-item">
-                                            <h1>S/. 1500</h1>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="fas fa-tshirt mr-1"></i> Tipo de
-                                            prenda:
-                                            Polo
+                                            <h1>S/. 1300</h1>
                                         </li>
                                         <li class="list-group-item">
                                             <div class="md-v-line"></div><i
-                                                class="fas fa-sort-numeric-down mr-2"></i>Cantidad:
+                                                class="fas fa-sort-numeric-down mr-2"></i>Cantidad de prendas:
                                             45
                                         </li>
                                         <li class="list-group-item">
@@ -131,74 +126,17 @@
                                             04/07/2020
                                         </li>
                                         <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="fas fa-spinner mr-2"></i>Estado:
-                                            Aceptado
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="pedidos-container">
-                                <div class="detalles plan-light">
-                                    <ul class="list-group top-margin-xs">
-                                        <li class="list-group-item">
-                                            <h3>PEDIDO 3</h3>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <h1>S/. 3000</h1>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="fas fa-tshirt mr-1"></i> Tipo de
-                                            prenda:
-                                            Polo
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i
-                                                class="fas fa-sort-numeric-down mr-2"></i>Cantidad:
-                                            45
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="far fa-calendar-alt mr-2"></i>Fecha:
-                                            04/07/2020
+                                            <div class="md-v-line"></div><i class="fas fa-clock mr-2"></i>Hora:
+                                            12:45:34
                                         </li>
                                         <li class="list-group-item">
                                             <div class="md-v-line"></div><i class="fas fa-spinner mr-2"></i>Estado:
                                             Aceptado
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="pedidos-container">
-                                <div class="detalles plan-light">
-                                    <ul class="list-group top-margin-xs">
-                                        <li class="list-group-item">
-                                            <h3>PEDIDO 4</h3>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <h1>S/. 5000</h1>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="fas fa-tshirt mr-1"></i> Tipo de
-                                            prenda:
-                                            Polo
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i
-                                                class="fas fa-sort-numeric-down mr-2"></i>Cantidad:
-                                            45
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="far fa-calendar-alt mr-2"></i>Fecha:
-                                            04/07/2020
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="md-v-line"></div><i class="fas fa-spinner mr-2"></i>Estado:
-                                            Aceptado
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <a class="btn btn-red btn-block my-0" href="ingresarfichatecnica.html">Agregar ficha tecnica</a>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -210,11 +148,10 @@
                         <select class="browser-default custom-select"
                             onchange="window.location=this.options[this.selectedIndex].value">
                             <option selected disabled value=""></option>
-                            <option value="PedidoServlet?estado=Aceptado">Aceptado</option>
+                            <option value="#">Aceptado</option>
                             <option value="#">Rechazado</option>
                             <option value="#">Pendiente</option>
                         </select>
-                        <button class="btn btn-red btn-block my-4" type="submit">Filtrar</button>
                     </div>
                 </div>
             </div>

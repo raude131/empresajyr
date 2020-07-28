@@ -1,134 +1,131 @@
-const formulario = document.getElementById("formulario")
-const nombre = document.getElementById("nombre")
-const primerapellido = document.getElementById("primerapellido")
-const segundoapellido = document.getElementById("segundoapellido")
-const contraseña = document.getElementById("contraseña")
-const cargo = document.getElementById("cargo")
-const correo = document.getElementById("correo")
-const direccion = document.getElementById("direccion")
-const empresa = document.getElementById("empresa")
-const ruc = document.getElementById("ruc")
-const dni = document.getElementById("dni")
-const telefono = document.getElementById("telefono")
-const celular = document.getElementById("celular")
+function validarRegistro(form){
+    
+    let validacion = true;
+    const nombre = form.nombre;
+    const apellidoPaterno = form.apellidoPaterno;
+    const apellidoMaterno = form.apellidoMaterno;
+    const contrasenia = form.contrasenia;
+    const cargo = form.cargo;
+    const correo = form.correo;
+    const direccion = form.direccion;
+    const empresa = form.empresa;
+    const ruc = form.ruc;
+    const dni = form.dni;
+    const telefono = form.telefono;
+    const celular = form.celular;
 
-formulario.addEventListener('submit', e =>{
-    e.preventDefault()
-    checkImputs()
-});
-
-function checkImputs(){
-    const nombreValue = nombre.value
-    const primerapellidoValue = primerapellido.value
-    const segundoapellidoValue = segundoapellido.value
-    const contraseñaValue = contraseña.value.trim()
-    const cargoValue = cargo.value.trim()
-    const correoValue = correo.value
-    const direccionValue = direccion.value.trim()
-    const empresaValue = empresa.value.trim()
-    const rucValue = ruc.value.trim()
-    const dniValue = dni.value.trim()
-    const telefonoValue =  telefono.value.trim()
-    const celularValue = celular.value.trim()
-
-    if(nombreValue === ''){
-        setErrorFor(nombre, 'Ingrese su nombre')
-    }else if(!isNombre(nombreValue)){
-        setErrorFor(nombre, "No ingresó un nombre válido")
-    }else{
-        setSuccessFor(nombre)
+    if(nombre.value === '' || isEmpty(nombre.value)){
+        setErrorFor(nombre, 'Ingrese un nombre');
+        validacion = false;
+    } else if (!isNombre(nombre.value)){
+        setErrorFor(nombre, 'Ingrese un nombre valido');
+        validacion = false;
+    } else {
+        setSuccessFor(nombre);
     }
 
-    if(primerapellidoValue === ''){
-        setErrorFor(primerapellido, "Ingrese su apellido")
-    }else if(!isPrimerApellido(primerapellidoValue)){
-        setErrorFor(primerapellido, "No ingresó un apellido válido")
-    }else{
-        setSuccessFor(primerapellido)
+    if(apellidoPaterno.value === '' || isEmpty(apellidoPaterno.value)){
+        setErrorFor(apellidoPaterno, 'Ingrese un apellido');
+        validacion = false;
+    } else if (!isApellidoPaterno(apellidoPaterno.value)){
+        setErrorFor(apellidoPaterno, 'Ingrese un apellido valido');
+        validacion = false;
+    } else {
+        setSuccessFor(apellidoPaterno);
     }
 
-    if(segundoapellidoValue === ''){
-        setErrorFor(segundoapellido, "Ingrese su apellido")
-    }else if(!isSegundoApellido(segundoapellidoValue)){
-        setErrorFor(segundoapellido, "No ingresó un apellido válido")
-    }else{
-        setSuccessFor(segundoapellido)
+    if(apellidoMaterno.value === '' || isEmpty(apellidoMaterno.value)){
+        setErrorFor(apellidoMaterno, 'Ingrese un apellido');
+        validacion = false;
+    } else if (!isApellidoMaterno(apellidoMaterno.value)){
+        setErrorFor(apellidoMaterno, 'Ingrese un apellido valido');
+        validacion = false;
+    } else {
+        setSuccessFor(apellidoMaterno);
     }
 
-    if(contraseñaValue === ''){
-        setErrorFor(contraseña, "Ingrese su contraseña")
-    }else{
-        setSuccessFor(contraseña)
+    if(contrasenia.value === '' || isEmpty(contrasenia.value)){
+        setErrorFor(contrasenia, 'Ingrese una contrasenia');
+        validacion = false;
+    }else if (!isContrasenia(contrasenia.value)){
+        setErrorFor(contrasenia,'No incluir espacios en la contrasenia');
+        validacion = false;
+    } else {
+        setSuccessFor(contrasenia);
     }
 
-    if(cargoValue === ''){
-        setErrorFor(cargo, "Ingrese su cargo")
-    }else{
-        setSuccessFor(cargo)
+    if(cargo.value === '' || isEmpty(cargo.value)){
+        setErrorFor(cargo, 'Ingrese un cargo');
+        validacion = false;
+    } else {
+        setSuccessFor(cargo);
     }
 
-    if(correoValue === ''){
-        setErrorFor(correo, "Ingrese su correo")
-    }else if(!isEmail(correoValue)){
-        setErrorFor(correo, "No ingresó un correo válido")
-    }else{
-        setSuccessFor(correo)
+    if(correo.value === '' || isEmpty(correo.value)){
+        setErrorFor(correo, 'Ingrese un correo');
+        validacion = false;
+    } else if (!isEmail(correo.value)){
+        setErrorFor(correo, 'Ingrese una cuenta gmail');
+        validacion = false;
+    } else {
+        setSuccessFor(correo);
+    }
+    
+    if(direccion.value === '' || isEmpty(direccion.value)){
+        setErrorFor(direccion, 'Ingrese una direccion');
+        validacion = false;
+    } else {
+        setSuccessFor(direccion);
     }
 
-    if(direccionValue === ''){
-        setErrorFor(direccion, "Ingrese su dirección")
-    }else{
-        setSuccessFor(direccion)
-    }
-    if(empresaValue === ''){
-        setErrorFor(empresa, "Ingrese su dirección")
-    }else{
-        setSuccessFor(empresa)
+    if(empresa.value === '' || isEmpty(empresa.value)){
+        setErrorFor(empresa, 'Ingrese una empresa');
+        validacion = false;
+    } else {
+        setSuccessFor(empresa);
     }
 
-    if(rucValue === ''){
-        setErrorFor(ruc, "Ingrese su RUC")
-    }else if(!validarNumero(rucValue)){
-        setErrorFor(ruc, "Ingrese un valor numérico")
-    }else if(ruc.value.length!=11){
-        setErrorFor(ruc, "Ingrese un RUC válido")
-    }
-    else{
-        setSuccessFor(ruc)
-    }
-
-    if(dniValue === ''){
-        setErrorFor(dni, "Ingrese su DNI")
-    }else if(!validarNumero(dniValue)){
-        setErrorFor(dni, "Ingrese un valor numérico")
-    }else if(dni.value.length!=8){
-        setErrorFor(dni, "Ingrese un DNI válido")
-    }
-    else{
-        setSuccessFor(dni)
+    if(ruc.value === '' || isEmpty(ruc.value)){
+        setErrorFor(ruc, 'Ingrese un ruc');
+        validacion = false;
+    } else if(!isRuc(ruc.value)){
+        setErrorFor(ruc, 'Ingrese un ruc valido');
+        validacion = false;
+    } else {
+        setSuccessFor(ruc);
     }
 
-    if(telefonoValue === ''){
-        setErrorFor(telefono, "Ingrese su teléfono")
-    }else if(!validarNumero(telefonoValue)){
-        setErrorFor(telefono, "Ingrese un valor numérico")
-    }else if(telefono.value.length!=6){
-        setErrorFor(telefono, "Ingrese un teléfono válido")
-    }
-    else{
-        setSuccessFor(telefono)
+    if(dni.value === '' || isEmpty(dni.value)){
+        setErrorFor(dni, 'Ingrese un dni');
+        validacion = false;
+    } else if(!isDni(dni.value)){
+        setErrorFor(dni, 'Ingrese un dni valido');
+        validacion = false;
+    } else {
+        setSuccessFor(dni);
     }
 
-    if(celularValue === ''){
-        setErrorFor(celular, "Ingrese su celular")
-    }else if(!validarNumero(celularValue)){
-        setErrorFor(celular, "Ingrese un valor numérico")
-    }else if(celular.value.length!=9){
-        setErrorFor(celular, "Ingrese un celular válido")
+    if(telefono.value === '' || isEmpty(telefono.value)){
+        setErrorFor(telefono, 'Ingrese un telefono');
+        validacion = false;
+    } else if(!isTelefono(telefono.value)){
+        setErrorFor(telefono, 'Ingrese un telefono valido');
+        validacion = false;
+    } else {
+        setSuccessFor(telefono);
     }
-    else{
-        setSuccessFor(celular)
+
+    if(celular.value === '' || isEmpty(celular.value)){
+        setErrorFor(celular, 'Ingrese un celular');
+        validacion = false;
+    } else if(!isCelular(celular.value)){
+        setErrorFor(celular, 'Ingrese un celular valido');
+        validacion = false;
+    } else {
+        setSuccessFor(celular);
     }
+
+    return validacion;
 }
 
 function setErrorFor(input, message){
@@ -147,19 +144,38 @@ function isNombre(nombre){
     return /^([a-z]|[A-Z]){1}[a-z]+(\ ([a-z]|[A-Z]){1}[a-z]+){0,4}$/.test(nombre);
 }
 
-function isPrimerApellido(primerapellido){
-    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(primerapellido);
+function isApellidoPaterno(apellidoPaterno){
+    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(apellidoPaterno);
 }
 
-function isSegundoApellido(segundoapellido){
-    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(segundoapellido);
+function isApellidoMaterno(apellidoMaterno){
+    return /^([a-z]|[A-Z]){1}[a-z]+$/.test(apellidoMaterno);
+}
+
+function isContrasenia(contrasenia){
+    return /^\S+$/.test(contrasenia);
 }
 
 function isEmail(email){
-    return /^([a-z]|[A-Z]|[1-9])+(\.([a-z]|[A-Z]|[1-9])+)*\@(gmail.com)$/.test(email);
+    return /^\w+(\.(\w)+)*\@(gmail.com)$/.test(email);
 }
 
-function validarNumero(number){
-    return /^([0-9])*$/.test(number);
+function isRuc(ruc){
+    return /^\d{11}$/.test(ruc);
+}
 
+function isDni(dni){
+    return /^\d{8}$/.test(dni);
+}
+
+function isTelefono(telefono){
+    return /^\d{7}$/.test(telefono);
+}
+
+function isCelular(celular){
+    return /^\d{9}$/.test(celular);
+}
+
+function isEmpty(texto){
+    return /^\s+$/.test(texto);
 }

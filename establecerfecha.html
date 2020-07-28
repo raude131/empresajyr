@@ -36,28 +36,28 @@
 
         <div id="menu-items">
             <div class="item">
-                <a href="index.html">
+                <a href="solicitudesdepedidos.html">
                     <div class="icon"><img src="images/solicitudes.png" alt=""></div>
                     <div class="title"><span>Solicitudes de pedidos</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="item">
-                <a href="#">
+                <a href="establecerfecha.html">
                     <div class="icon"><img src="images/fecha.png" alt=""></div>
                     <div class="title"><span>Establecer fecha de producción</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="item">
-                <a href="#">
+                <a href="avancesdiarios.html">
                     <div class="icon"><img src="images/avance.png" alt=""></div>
                     <div class="title"><span>Registrar avance diario</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="cerrar">
-                <h6><a href="">Cerrar sesión</a></h6>
+                <h6><a href="index.html">Cerrar sesión</a></h6>
             </div>
         </div>
     </div>
@@ -66,22 +66,19 @@
             <div class="content-center">
                 <h2>ESTABLECER FECHA DE PRODUCCIÓN</h2>
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4" style="text-align: center;">
+            <div class="row mb-3">
+                <div class="col-md-4 p-0" style="text-align: left;">
                     <p style="color: #ffff;">Filtrar por estado</p>
                     <div class="estados" style="float: none;">
                         <select class="browser-default custom-select"
                             onchange="window.location=this.options[this.selectedIndex].value">
                             <option selected disabled value=""></option>
-                            <option value="PedidoServlet?estado=Aceptado">En producción</option>
+                            <option value="#">En producción</option>
                             <option value="#">Producción en pausa</option>
                             <option value="#">Producción terminada</option>
                         </select>
-                        <button class="btn btn-red btn-block my-4" type="submit">Filtrar</button>
                     </div>
                 </div>
-                <div class="col-md-4"></div>
             </div>
             <div class="row">
                 <table class="table" style="background-color: #ffff; text-align: center;">
@@ -102,68 +99,178 @@
                             <th scope="row">1</th>
                             <td>POLO</td>
                             <td>500</td>
-                            <td><button type="button" class="btn btn-dark btn-sm m-0">VER</button></td>
-                            <td>25/04</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalDetalle">
+                                    Ver <i class="fa fa fa-sort mr-0"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalDetalle" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle" style="text-align: center;">
+                                                    Detalle de la ficha tecnica
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" style="text-align: center;">
+                                                <table class="table" style="background-color: #ffff; width: 100%;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">TALLA</th>
+                                                            <th scope="col">S</th>
+                                                            <th scope="col">M</th>
+                                                            <th scope="col">L</th>
+                                                            <th scope="col">XL</th>
+                                                            <th scope="col">XXL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CANTIDAD</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table" style="background-color: #ffff; width: 100%;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">TELA</th>
+                                                            <th scope="col">COLOR</th>
+                                                            <th scope="col">DISEÑO</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Algodon</td>
+                                                            <td>rojo</td>
+                                                            <td>Ninguno</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table" style="background-color: #ffff; width: 100%;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">BORDADO</th>
+                                                            <th scope="col">ESTAMPADO</th>
+                                                            <th scope="col">CUELLO</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Ninguno</td>
+                                                            <td>Logo</td>
+                                                            <td>Camisa</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table" style="background-color: #ffff; width: 100%;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">ETIQUETA</th>
+                                                            <th scope="col">Talla</th>
+                                                            <th scope="col">Marca</th>
+                                                            <th scope="col">Composicion</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>ESCOGIDO</td>
+                                                            <td>SI</td>
+                                                            <td>NO</td>
+                                                            <td>NO</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table" style="background-color: #ffff; width: 100%;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">MEDIDAS</th>
+                                                            <th scope="col">S</th>
+                                                            <th scope="col">M</th>
+                                                            <th scope="col">L</th>
+                                                            <th scope="col">XL</th>
+                                                            <th scope="col">XXL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Pecho</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cintura</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cadera</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Manga(Largo)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Manga(Ancho)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Espalda(Alto)</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</td>
+                                                            <td>100</tD>
+                                                            <td>100</tD>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="container">
+                                                    <div class="form-group purple-border">
+                                                        <label for="exampleFormControlTextarea4" style="font-weight: bold;">Detalles y comentarios:</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" style="border:black 3px solid;"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>12/05/2019</td>
                             <td><select class="browser-default custom-select">
-                                <option selected>En producción</option>
-                                <option value="1">Producción en pausa</option>
-                                <option value="2">Producción terminada</option>
-                            </select></td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
-                            <td><i class="fas fa-save"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td><button type="button" class="btn btn-dark btn-sm m-0">VER</button></td>
-                            <td>25/04</td>
-                            <td><select class="browser-default custom-select">
-                                <option selected>En producción</option>
-                                <option value="1">Producción en pausa</option>
-                                <option value="2">Producción terminada</option>
-                            </select></td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
-                            <td><i class="fas fa-save"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td><button type="button" class="btn btn-dark btn-sm m-0">VER</button></td>
-                            <td>25/04</td>
-                            <td><select class="browser-default custom-select">
-                                <option selected>En producción</option>
-                                <option value="1">Producción en pausa</option>
-                                <option value="2">Producción terminada</option>
-                            </select></td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
-                            <td><i class="fas fa-save"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td><button type="button" class="btn btn-dark btn-sm m-0">VER</button></td>
-                            <td>25/04</td>
-                            <td><select class="browser-default custom-select">
-                                <option selected>En producción</option>
-                                <option value="1">Producción en pausa</option>
-                                <option value="2">Producción terminada</option>
-                            </select></td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
-                            <td><i class="fas fa-save"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td><button type="button" class="btn btn-dark btn-sm m-0">VER</button></td>
-                            <td>25/04</td>
-                            <td><select class="browser-default custom-select">
-                                <option selected>En producción</option>
-                                <option value="1">Producción en pausa</option>
-                                <option value="2">Producción terminada</option>
+                                <option selected disabled value=""></option>
+                                <option value="#">En producción</option>
+                                <option value="#">Producción en pausa</option>
+                                <option value="#">Producción terminada</option>
                             </select></td>
                             <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
                             <td><i class="fas fa-save"></i></td>
