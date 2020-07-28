@@ -65,7 +65,7 @@
         </div>
     </div>
     <div id="fichatecnica">
-        <form action="" id="formulario" action="#" method="POST" onsubmit="return validarFichaTecnica(this)">
+        <form name="form1" id="formulario" action="#" method="POST" onsubmit="return validarFichaTecnica(this)">
             <div class="container">
                 <div class="content-center">
                     <h2>INGRESAR FICHA TÉCNICA<i class="fas fa-book-open" style="padding-left: 15px;"></i></h2>
@@ -184,11 +184,24 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4" style="text-align: right;">
-                                        <label for="">Estampados</label>
+                                        <label for="">Estampado</label>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="campo">
                                             <input type="text" id="#" class="form-control mb-4" name="estampado">
+                                            <i class="fas fa-check-circle"></i>
+                                            <i class="fas fa-exclamation-circle"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4" style="text-align: right;">
+                                        <label for="">Tipo de Cuello</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="campo">
+                                            <input type="text" id="#" class="form-control mb-4" name="tipoCuello">
                                             <i class="fas fa-check-circle"></i>
                                             <i class="fas fa-exclamation-circle"></i>
                                             <small>Error message</small>

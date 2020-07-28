@@ -11,6 +11,7 @@ function validarFichaTecnica(form){
     const disenio = form.disenio;
     const bordado = form.bordado;
     const estampado = form.estampado;
+    const tipoCuello = form.tipoCuello;
     const etiquetas = form.etiqueta;
     const medidaPS = form.medidaPS;
     const medidaPM = form.medidaPM;
@@ -112,6 +113,13 @@ function validarFichaTecnica(form){
         validacion = false;
     } else {
         setSuccessFor(estampado);
+    }
+
+    if(tipoCuello.value === '' || isEmpty(tipoCuello.value)){
+        setErrorFor(tipoCuello, 'Ingrese un tipo de cuello');
+        validacion = false;
+    } else {
+        setSuccessFor(tipoCuello);
     }
 
     if(!isCheckSeleccionado(etiquetas)){
