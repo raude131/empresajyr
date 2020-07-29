@@ -43,13 +43,13 @@
                     <div class="title"><span>Mis pedidos</span></div>
                 </a>
             </div>
-            <div class="item separator"></div>
+            <!--div class="item separator"></div>
             <div class="item">
                 <a href="#">
                     <div class="icon"><img src="images/seguimiento.png" alt=""></div>
                     <div class="title"><span>Seguimiento del pedido</span></div>
                 </a>
-            </div>
+            </div-->
             <div class="item separator"></div>
             <div class="item">
                 <a href="realizarpedidos.html">
@@ -59,7 +59,7 @@
             </div>
             <div class="item separator"></div>
             <div class="cerrar">
-                <h6><a href="">Cerrar sesión</a></h6>
+                <h6><a href="index.html">Cerrar sesión</a></h6>
             </div>
         </div>
     </div>
@@ -73,20 +73,20 @@
                     <p class="step-text">PRODUCCIÓN</p>
                     <img src="images/seguimiento1.png" style="width: 300px;"><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Última fecha de avance: 20/05/20</p>
+                    <p class="step-text">Última fecha de avance<br/>20/05/20</p>
                 </div>
                 <div class="step">
                     <p class="step-text">ALMACÉN</p>
                     <img src="images/seguimiento2.png" style="width: 170px; padding-bottom: 30px; padding-top: 5px;"
                         alt=""><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Fecha de ingreso al almacén</p>
+                    <p class="step-text">Fecha de ingreso al almacén<br/>20/05/20</p>
                 </div>
                 <div class="step">
                     <p class="step-text">ENTREGADO</p>
                     <img src="images/seguimiento3.png" style="width: 300px; padding-top: 10px;" alt=""><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Fecha de entrega</p>
+                    <p class="step-text">Fecha de entrega<br/>20/05/20</p>
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
 
     <script>
         const bullets = [...document.querySelectorAll('.bullet')];
-        var estado = "terminado";
+        var estado = "";
         if (estado === "terminado") {
             bullets[0].classList.add('completed');
         } else if (estado === "almacen") {
