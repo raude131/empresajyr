@@ -15,8 +15,7 @@ function comparar() {
     if (fecha_input < fecha_actual) {
         Swal.fire({
             icon: 'error',
-            title: 'Error',
-            text: 'Ingrese por favor una fecha mayor a la actual',
+            text: 'Ingrese por favor una fecha mayor o igual a la actual',
           })
     }
 
