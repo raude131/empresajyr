@@ -16,7 +16,7 @@ function comparar() {
         Swal.fire({
             icon: 'error',
             text: 'Ingrese por favor una fecha mayor o igual a la actual',
-          })
+        })
     }
 
 }
