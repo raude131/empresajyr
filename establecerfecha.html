@@ -14,6 +14,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="css/establecerfecha.css">
     <link rel="icon" href="images/polo.ico">
 </head>
@@ -30,7 +31,9 @@
         </div>
 
         <div id="profile">
-            <div id="photo"><h4>G</h4></div>
+            <div id="photo">
+                <h4>G</h4>
+            </div>
             <div id="name"><span>Jefe de Producción</span></div>
         </div>
 
@@ -122,7 +125,8 @@
                                                     <thead class="black white-text">
                                                         <tr>
                                                             <th scope="col">TIPO PRENDA</th>
-                                                            <th style="padding: 0px;" scope="col">CANTIDAD DE PRENDAS</th>
+                                                            <th style="padding: 0px;" scope="col">CANTIDAD DE PRENDAS
+                                                            </th>
                                                             <th scope="col">SUBTOTAL</th>
                                                         </tr>
                                                     </thead>
@@ -151,7 +155,8 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title card-body" id="exampleModalLongTitle" style="text-align: center;">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle"
+                                                    style="text-align: center;">
                                                     Detalle de la ficha tecnica
                                                 </h5>
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -297,8 +302,10 @@
                                                 </table>
                                                 <div class="container">
                                                     <div class="form-group purple-border">
-                                                        <label for="exampleFormControlTextarea4" style="font-weight: bold;">Detalles y comentarios:</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" style="border:black 3px solid;"></textarea>
+                                                        <label for="exampleFormControlTextarea4"
+                                                            style="font-weight: bold;">Detalles y comentarios:</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea4"
+                                                            rows="3" style="border:black 3px solid;"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -307,25 +314,24 @@
                                 </div>
                             </td>
                             <td>12/05/2019</td>
-                            <td>
-                                <select class="browser-default custom-select">
-                                <option selected disabled value=""></option>
-                                <option value="#">En producción</option>
-                                <option value="#">Producción en pausa</option>
-                                <option value="#">Producción terminada</option>
-                                </select>
+
+                            <td><select class="browser-default custom-select">
+                                    <option selected value="#">En producción</option>
+                                    <option value="#">Producción en pausa</option>
+                                    <option value="#">Producción terminada</option>
+                                </select></td>
+                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha" oninput="comparar()">
                             </td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha"></td>
+                            
                             <td><i class="fas fa-save"></i></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
     <!-- Footer -->
-    
+
     <!-- Footer -->
     <script>
         const btn = document.querySelector('#menu-btn');
@@ -337,7 +343,7 @@
         });
     </script>
 
-
+    <script src="js/establecerfecha.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
