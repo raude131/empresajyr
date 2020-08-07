@@ -73,24 +73,40 @@
                     <p class="step-text">PRODUCCIÓN</p>
                     <img src="images/seguimiento1.png" style="width: 300px;"><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Última fecha de avance<br/>20/05/20  200/300</p>
+                    <p class="step-text">Última fecha de avance<br><span style="visibility: visible;">20/05/20&nbsp;&nbsp;200/300</span></p>
                 </div>
                 <div class="step">
                     <p class="step-text">ALMACÉN</p>
                     <img src="images/seguimiento2.png" style="width: 170px; padding-bottom: 30px; padding-top: 5px;"
                         alt=""><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Fecha de ingreso al almacén<br/>20/05/20</p>
+                    <p class="step-text">Fecha de ingreso al almacén<br><span style="visibility: visible;">20/05/20</span></p>
                 </div>
                 <div class="step">
                     <p class="step-text">ENTREGADO</p>
                     <img src="images/seguimiento3.png" style="width: 300px; padding-top: 10px;" alt=""><br>
                     <div class="bullet"><i class="fas fa-check"></i><i class="far fa-clock"></i></div>
-                    <p class="step-text">Fecha de entrega<br/>20/05/20</p>
+                    <p class="step-text">Fecha de entrega<br><span style="visibility: visible;">20/05/20</span></p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const bullets = [...document.querySelectorAll('.bullet')];
+        var estado = "entregado";
+        if (estado === 'produccionterminadaalmacen') {
+            bullets[0].classList.add('completed');
+        } else if (estado === "produccionalmacen") {
+            bullets[0].classList.add('completed');
+            bullets[1].classList.add('completed');
+        } else if (estado === "entregado") {
+            bullets[0].classList.add('completed');
+            bullets[1].classList.add('completed');
+            bullets[2].classList.add('completed2');
+        }
+    </script>
+
     <!-- Footer -->
     <footer class="page-footer font-small stylish-color-dark lighten-3 pt-4">
 
@@ -178,20 +194,6 @@
         });
     </script>
 
-    <script>
-        const bullets = [...document.querySelectorAll('.bullet')];
-        var estado = "";
-        if (estado === "terminado") {
-            bullets[0].classList.add('completed');
-        } else if (estado === "almacen") {
-            bullets[0].classList.add('completed');
-            bullets[1].classList.add('completed');
-        } else if (estado === "entregado") {
-            bullets[0].classList.add('completed');
-            bullets[1].classList.add('completed');
-            bullets[2].classList.add('completed2');
-        }
-    </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>

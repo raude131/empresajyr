@@ -16,6 +16,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/solicitudesdepedidos.css">
     <link rel="icon" href="images/polo.ico">
+    <script type="text/javascript" src="js/validacionsolicitudpedido.js"></script>
 </head>
 
 <body>
@@ -75,7 +76,7 @@
                             <th scope="col">N°</th>
                             <th scope="col">CLIENTE</th>
                             <th scope="col">FECHA</th>
-                            <th scope="col">PRENDAS SOLICITADAS</th>
+                            <th scope="col">TOTAL DE PRENDAS</th>
                             <th scope="col">TOTAL A PAGAR</th>
                             <th scope="col">DETALLE</th>
                             <th></th>
@@ -138,7 +139,7 @@
                                     data-target="#modalRechazado">RECHAZAR</button>
 
                                 <!-- Modal -->
-                                <form name="form" action="#" method="POST">
+                                <form name="form" action="#" method="POST" onsubmit="return validarSolicitudPedido(this)">
                                     <div class="modal fade" id="modalAceptado" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -159,9 +160,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea rows="5" style="resize: none;" class="form-control"
+                                                        <div class="col-md-12 campo">
+                                                            <textarea class="form-control"
                                                             id="formGroupExampleInput2" name="mensaje"></textarea>
+                                                            <i class="fas fa-check-circle"></i>
+                                                            <i class="fas fa-exclamation-circle"></i>
+                                                            <small>Error message</small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -173,7 +177,7 @@
                                     </div>
                                 </form>
                                 <!-- Modal -->
-                                <form name="form" action="#" method="POST">
+                                <form name="form" action="#" method="POST" onsubmit="return validarSolicitudPedido(this)">
                                     <div class="modal fade" id="modalRechazado" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -194,9 +198,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea rows="5" style="resize: none;" class="form-control"
+                                                        <div class="col-md-12 campo">
+                                                            <textarea class="form-control"
                                                             id="formGroupExampleInput2" name="mensaje"></textarea>
+                                                            <i class="fas fa-check-circle"></i>
+                                                            <i class="fas fa-exclamation-circle"></i>
+                                                            <small>Error message</small>
                                                         </div>
                                                     </div>
                                                 </div>
