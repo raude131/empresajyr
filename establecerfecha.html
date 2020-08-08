@@ -98,6 +98,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <form name="form1" action="#" method="POST">
                         <tr style="vertical-align: middle;">
                             <th scope="row">1</th>
                             <td>
@@ -223,9 +224,7 @@
                                                     <thead class="black white-text">
                                                         <tr>
                                                             <th scope="col">ETIQUETA</th>
-                                                            <th scope="col">Talla</th>
-                                                            <th scope="col">Marca</th>
-                                                            <th scope="col">Composicion</th>
+                                                            <th scope="col" colspan="3">Características</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -255,48 +254,48 @@
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Cintura</td>
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Cadera</td>
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Manga(Largo)</td>
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Manga(Ancho)</td>
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Espalda(Alto)</td>
                                                             <td>100</td>
                                                             <td>100</td>
                                                             <td>100</td>
-                                                            <td>100</tD>
-                                                            <td>100</tD>
+                                                            <td>100</td>
+                                                            <td>100</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -314,24 +313,22 @@
                                 </div>
                             </td>
                             <td>12/05/2019</td>
-
-                            <td><select class="browser-default custom-select">
-                                    <option selected value="#">En producción</option>
-                                    <option value="#">Producción en pausa</option>
-                                    <option value="#">Producción terminada</option>
+                            <td><select class="browser-default custom-select" name="estadoProduccion">
+                                    <option selected value="produccionpausa">En producción</option>
+                                    <option value="produccionavance">Producción en pausa</option>
+                                    <option value="produccionterminada">Producción terminada</option>
                                 </select></td>
-                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha" oninput="comparar()">
+                            <td><input type="date" id="fecha" placeholder="Seleccione la fecha" name="fecha" onchange="comparar()">
                             </td>
-                            
-                            <td><i class="fas fa-save"></i></td>
+                            <td><button class="btn btn-red rounded btn-sm" type="submit"><i class="fas fa-save"></i></button></td>
                         </tr>
+                        </form>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     <!-- Footer -->
-
     <!-- Footer -->
     <script>
         const btn = document.querySelector('#menu-btn');
@@ -342,7 +339,6 @@
             document.querySelector('body').classList.toggle('body-expanded');
         });
     </script>
-
     <script src="js/establecerfecha.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript"
