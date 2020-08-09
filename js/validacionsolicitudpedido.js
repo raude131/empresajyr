@@ -4,17 +4,21 @@ function validarSolicitudPedido(form){
     const mensaje = form.mensaje;
 
     if(mensaje.value.length === 0 || isEmpty(mensaje.value)){
-        setErrorFor(mensaje,'Ingrese un mensaje');
+        Swal.fire({
+            icon: 'error',
+            text: 'Ingrese un mensaje',
+        });
+        //setErrorFor(mensaje,'Ingrese un mensaje');
         validacion = false;
-    }else{
+    }/*else{
         setSuccessFor(mensaje);
-    }
+    }*/
 
     return validacion;
 
 }
 
-function setErrorFor(input, message) {
+/*function setErrorFor(input, message) {
     const campo = input.parentElement
     const small = campo.querySelector('small')
     campo.className = 'campo error'
@@ -24,7 +28,7 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
     const campo = input.parentElement
     campo.className = 'campo success'
-}
+}*/
 
 function isEmpty(texto){
     return /^\s+$/.test(texto);

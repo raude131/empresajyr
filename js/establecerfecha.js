@@ -1,19 +1,22 @@
 
-var date = new Date();
+//const allinputs2  = document.querySelectorAll("input");
+var allinputs;
 
-var day = date.getDate();
-var month = date.getMonth() + 1;
-var year = date.getFullYear();
+function comparar(id) {
+    //var fecha_input = document.getElementById(id).value;
+    /*var fecha_produccion = allinputs[id].value;
+    alert(fecha_produccion);*/
+   
+    var fecha = id.value;
+    var myLength = allinputs.length;
+    var input;
+    for (var i = 0; i < myLength; ++i) {
+        input = allinputs[i];
+        //input.setAttribute("value", today);
+        alert(input.value);
+      }
 
-if (month < 10) month = "0" + month;
-if (day < 10) day = "0" + day;
-
-var today = year + "-" + month + "-" + day;       
-document.getElementById("fecha").value = today;
-
-function comparar() {
-    var fecha_input = document.getElementById('fecha').value;
-    var fecha_actual = new Date();
+   /* var fecha_actual = new Date();
     var fechaActualString  = (fecha_actual.getMonth()+1).toString() + '-' 
     + fecha_actual.getDate().toString() + '-' + fecha_actual.getFullYear().toString();
     
@@ -25,6 +28,20 @@ function comparar() {
             text: 'Ingrese por favor una fecha mayor o igual a la actual',
         })
 
-        document.getElementById("fecha").value = today;
-    }
+        document.getElementById(id).value = today;
+    }*/
+}
+
+function validar(){
+    allinputs  = document.querySelectorAll("input");
+    //alert(allinputs);
+    var input;
+    var myLength = allinputs.length;
+    for (var i = 0; i < myLength; ++i) {
+        input = allinputs[i];
+        //input.setAttribute("value", today);
+        
+      }
+
+     this.comparar(input)
 }

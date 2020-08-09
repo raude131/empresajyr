@@ -62,25 +62,11 @@
                 <h2>REPORTE DE ALMACÉN</h2>
             </div>
             <div class="row">
-                <div class="container" style="padding-bottom: 20px;">
-                    <div class="col-md-6">
-                        <ul class="nav md-tabs nav-justified blue mx-0 mb-0 mt-1">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!" style="color: #ffff;">PEDIDOS EN ALMACÉN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!" style="color: #ffff;">PEDIDOS TERMINADOS</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <table class="table" style="background-color: #ffff; text-align: center;">
                     <thead class="black white-text">
                         <tr>
                             <th scope="col">N°</th>
-                            <th scope="col">PRODUCTO</th>
+                            <th scope="col">DETALLE PEDIDO</th>
                             <th scope="col">CANTIDAD</th>
                             <th scope="col">FECHA DE PRODUCCIÓN TERMINADA</th>
                             <th scope="col">ESTADO</th>
@@ -90,52 +76,61 @@
                     <tbody>
                         <tr style="vertical-align: middle;">
                             <th scope="row">1</th>
-                            <td>POLO</td>
+                            <td>
+                                <button type="button" class="btn btn-dark btn-sm m-0" data-toggle="modal"
+                                    data-target="#modalPedido">
+                                    Ver <i class="fa fa fa-sort mr-0"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalPedido" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title card-body" id="exampleModalLongTitle">
+                                                    Detalle del pedido
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table"
+                                                    style="background-color: #ffff; text-align: center;">
+                                                    <thead class="black white-text">
+                                                        <tr>
+                                                            <th scope="col">TIPO PRENDA</th>
+                                                            <th style="padding: 0px;" scope="col">CANTIDAD DE PRENDAS
+                                                            </th>
+                                                            <th scope="col">SUBTOTAL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="padding: 0px;">Bardales Priale, Rolando</td>
+                                                            <td>100</td>
+                                                            <td>S/.3000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>500</td>
-                            <td>25/04</td>
+                            <td>25-05-2020</td>
                             <td>Listo para la entrega</td>
-                            <td><i class="far fa-check-circle"></i></td>
+                            <td><a href="#" class="btn btn-red rounded btn-sm" style="color: white;"><i class="far fa-check-circle"></i></a></td>
                         </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td>25/04</td>
-                            <td>Listo para la entrega</td>
-                            <td><i class="far fa-check-circle"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td>25/04</td>
-                            <td>Listo para la entrega</td>
-                            <td><i class="far fa-check-circle"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td>25/04</td>
-                            <td>Listo para la entrega</td>
-                            <td><i class="far fa-check-circle"></i></td>
-                        </tr>
-                        <tr style="vertical-align: middle;">
-                            <th scope="row">1</th>
-                            <td>POLO</td>
-                            <td>500</td>
-                            <td>25/04</td>
-                            <td>Listo para la entrega</td>
-                            <td><i class="far fa-check-circle"></i></td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
     <!-- Footer -->
-
     <!-- Footer -->
     <script>
         const btn = document.querySelector('#menu-btn');
@@ -146,8 +141,6 @@
             document.querySelector('body').classList.toggle('body-expanded');
         });
     </script>
-
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
